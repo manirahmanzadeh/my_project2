@@ -1,0 +1,181 @@
+@font-face {
+    font-family: openSans;
+    src: url('/fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: openSans;
+    src: url('/fonts/OpenSans-Bold.ttf');
+    font-weight: bold;
+}
+
+@media screen and (min-width: 480px) {
+    body {}
+}
+
+@keyframes text-animation {
+    from {
+        transform: scale(0.5);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: openSans;
+}
+
+.header {
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.navbar .links ul li {
+    display: inline-block;
+    margin-inline: 20px;
+}
+
+.navbar .links ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .links ul li a:hover {
+    color: grey;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .icons i {
+    margin-inline: 10px;
+}
+
+.boxes {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+.boxes .text-box {
+    background-color: #D4E7EB;
+    padding: 50px;
+
+}
+
+.boxes .text-box h1 {
+    font-size: 60px;
+    animation-name: text-animation;
+    animation-duration: 1s;
+}
+
+.boxes .text-box p {
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 30px;
+    animation-name: text-animation;
+    animation-duration: 1s;
+}
+
+.boxes .text-box .buttons {
+    display: flex;
+    animation-name: text-animation;
+    animation-duration: 1s;
+}
+
+.boxes .text-box .buttons a {
+    padding-inline: 40px;
+    margin-inline: 10px;
+    padding-block: 20px;
+    margin-block: 10px;
+    margin-top: 30px;
+    text-decoration: none;
+    transition: color 2s, background-color 2s, border-width 2s, border-color 2s;
+}
+
+.boxes .text-box .buttons .button-1 {
+    background-color: black;
+    color: white;
+}
+
+.boxes .text-box .buttons .button-1:hover {
+    border: 2px solid black;
+    background-color: transparent;
+    color: black;
+}
+
+.boxes .text-box .buttons .button-2 {
+    border: 2px solid black;
+    color: black;
+}
+
+.boxes .text-box .buttons .button-2:hover {
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+
+
+.boxes .user-box img {
+    width: 500px;
+    animation-name: text-animation;
+    animation-duration: 1s;
+}
+
+.items {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.items .item img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 0 20px grey;
+}
+
+.items .item {
+    position: relative;
+}
+
+.items .item .discription {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.items .item:hover .discription {
+    opacity: 1;
+}
+
+.footer {
+    height: 200px;
+}
